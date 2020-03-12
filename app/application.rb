@@ -28,7 +28,7 @@ class Application
     
     elsif req.path.match(/add/)
         @@items.each do |item|
-          if @@items.include?(item)
+          if @@items.include?(item) == true
             @@cart << item
             resp.write "added #{item}\n"
           else
