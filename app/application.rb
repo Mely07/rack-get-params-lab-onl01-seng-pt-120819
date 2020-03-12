@@ -30,7 +30,7 @@ class Application
         @@items.each do |item|
           if @@items.include?(item) == true
             @@cart << item
-            resp.write "added #{item}\n"
+            resp.write "added #{item}"
           else
             resp.write "We don't have that #{item}"
           end
