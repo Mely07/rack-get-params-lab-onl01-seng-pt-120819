@@ -29,9 +29,9 @@ class Application
       if @@items.include? == false 
         resp.write "We don't have that #{item}"
       else
-      @@items.each do |item|
-        @@cart << item
-        resp.write "Added #{item}"
+        @@items.each do |item|
+          @@cart << item
+          resp.write "Added #{item}"
       end
         
    
