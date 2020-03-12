@@ -27,13 +27,12 @@ class Application
       end
     
     elsif req.path.match(/add/)
-        @@items.each do |item|
-            @@cart << item
-            resp.write "added #{item}"
-          else
-            resp.write "We don't have that #{item}"
-          end
-        end
+      item = req.params["item"]
+      if @@items.include?(item)
+        @@cart << item
+      else
+        resp.write "We don't have that #{item}"
+      end
    
     else  # path not found
       resp.write "Path Not Found"
