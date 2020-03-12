@@ -26,6 +26,8 @@ class Application
         end
       end
     elsif req.path.match(/add/)
+      if @@items.include? == false 
+        resp.write "added #{item}"
       @@items.each do |item|
         @@cart << item
         resp.write "added #{item}"
