@@ -27,7 +27,6 @@ class Application
       end
     
     elsif req.path.match(/add/)
-
         @@items.each do |item|
           if item?
           @@cart << item
