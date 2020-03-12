@@ -25,7 +25,8 @@ class Application
           resp.write "#{c_item}\n"
         end
       end
-    
+    elsif req.path.match(/add/)
+        
    
     else  # path not found
       resp.write "Path Not Found"
