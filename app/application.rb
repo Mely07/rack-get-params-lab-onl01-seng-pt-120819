@@ -25,13 +25,15 @@ class Application
           resp.write "#{c_item}\n"
         end
       end
+    
     elsif req.path.match(/add/)
-      if @@items.include? == false 
-        resp.write "We don't have that #{item}"
-      else
+
         @@items.each do |item|
+          if item?
           @@cart << item
           resp.write "Added #{item}"
+        else
+          resp.write "We don't have that #{item}"
       end
         
    
